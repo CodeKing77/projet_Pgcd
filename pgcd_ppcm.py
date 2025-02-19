@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter.ttk import *
 from tkinter.messagebox import *
 from math import *
+from PIL import Image , ImageTk  #Importation des bibliothèques de pour l'affichage d'images sur la fenêtre
 
 
 def calcul(event):
@@ -64,6 +65,13 @@ fenetre.geometry("650x450")
 fenetre.resizable(width=False , height=False)
 fenetre.eval('tk::PlaceWindow .  center')    #Pour centrer la fenêtre principale
 fenetre.config(background="darkslateblue")
+
+
+# Charger l'image pour l'icône de la fenêtre
+icon_path = "C:/Users/lenovo/Desktop/MyApps/projet_calculPgcd/calculpgcd_png.png" 
+icon_image = Image.open(icon_path)
+icon_photo = ImageTk.PhotoImage(icon_image)
+fenetre.iconphoto(False, icon_photo)
 
 
 #Ajout des Widgets
