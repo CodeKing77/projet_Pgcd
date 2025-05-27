@@ -74,7 +74,7 @@ choixFonction = Combobox(fenetre, values=listeFonction, width=54)  # Affichage d
 choixFonction.place_configure(x=250 , y=150)
 choixFonction.configure(justify="center")    #Centre chaque item de la liste à choix multiple
 choixFonction.set("Veuillez choisir une fonction...")  # définir ce qui s'affichera par défaut
-choixFonction.bind("<<ComboboxSelected>>" , calcul)   #Liaison 
+choixFonction.bind("<<ComboboxSelected>>" , calcul)   #Liaison
 
 
 labelAffichageResultat = Label(fenetre, text="")
