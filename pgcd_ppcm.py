@@ -29,30 +29,7 @@ def calcul(event):
             case _ :
                 labelAffichageResultat["text"] = "Veuillez choisir une Opération"
 
-def calculFonction():
-    try :
-        premierNombre = int(zoneSaisiePremierNombre.get())
-        secondNombre = int(zoneSaisieSecondNombre.get())
-
-    except :
-        showwarning("Avertissement", "Veuillez entrer des nombres entiers")
-        return
-
-    else :
-        operation = choixFonction.get()
-        match operation:
-            case "PGCD" :
-                resultatPgcd = gcd(premierNombre, secondNombre)
-                labelAffichageResultat["text"] = f"PGCD = {resultatPgcd}"
-            
-            case "PPCM" :
-
-                resultatPpcm = lcm(premierNombre, secondNombre)
-                labelAffichageResultat["text"] = f"PPCM = {resultatPpcm}"
-
-            case _ :
-                labelAffichageResultat["text"] = "Veuillez choisir une Opération"
-
+#Fonction pour effacer les zones de saisie
 def annulation():
     zoneSaisiePremierNombre.delete(0, END)
     zoneSaisieSecondNombre.delete(0,END)
